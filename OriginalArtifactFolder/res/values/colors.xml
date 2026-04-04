@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--black for primary text color, green for success msg, red for error message
+    beige for background, blue_grey for button background with white  text, blue for "hyperlink" text,
+     plum for accent (optional)-->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="beige">#EDCF93</color>
+    <color name="plum">#7D3950</color>
+    <color name="blue_grey">#49556C</color>
+    <color name="green">#2D7A06</color>
+    <color name="red">#DE1E34</color>
+    <color name="blue">#0000FF</color>
+</resources>
