@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="50dp"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp"
+    tools:context=".SmsPermissionActivity">
+
+    <!--header -->
+    <TextView
+        android:id="@+id/textViewMSG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/msg_permission"
+        android:layout_marginTop="10dp"/>
+
+    <!---Button to Send SMS -->
+    <Button
+        android:id="@+id/buttonSMS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/msg_button"
+        android:layout_below="@+id/editTextMessage"
+        android:layout_centerHorizontal="true" />
+
+    <!-- input field phone number -->
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_below="@+id/textViewMSG"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:inputType="phone"
+        android:ems="10"
+        android:layout_alignParentLeft="true"
+        android:autofillHints="phone"
+        android:layout_alignParentStart="true"
+        android:hint="@string/hint_phone"
+        android:isScrollContainer="false" />
+
+    <!-- Input field message-->
+    <EditText
+        android:id="@+id/editTextMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@+id/editTextPhone"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/editTextPhone"
+        android:layout_alignEnd="@+id/editTextPhone"
+        android:hint="@string/msg_text"
+        android:inputType="text">
+
+    </EditText>
+</RelativeLayout>
