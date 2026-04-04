@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">InventoryApp De La Rosa</string>
+    <string name="Sign_in">Sign In</string>
+    <string name="user_name">Enter user name</string>
+    <string name="password"> Enter password</string>
+    <string name="sign_up_prompt">Do not have an account?</string>
+    <string name="sign_up_button">Sign up</string>
+    <string name="sign_in_button">Sign in</string>
+    <string name="add_item">Add to Inventory</string>
+    <string name="item_name">Item name</string>
+    <string name="initial_quantity">Quantity</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="submit_button">Submit</string>
+    <string name="inventory_title">Inventory</string>
+    <string name="desc_img_delete">Delete item image icon</string>
+    <string name="desc_img_edit">Edit quantity image icon</string>
+    <string name="hint_phone">Phone number </string>
+    <string name="text_edit">Edit</string>
+    <string name="add_icon">Add new item</string>
+    <string name="update_quantity">Update Quantity</string>
+    <string name="update_button"> Update</string>
+    <string name="log_out"> Log out</string>
+</resources>
