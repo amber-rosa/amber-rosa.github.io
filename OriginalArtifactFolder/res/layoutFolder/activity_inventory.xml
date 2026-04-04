@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--XMl Layout for RecyclerView this is my "container for my grid layout-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    android:padding="30dp">
+
+    <!--header of inventory page -->
+    <TextView
+        android:id="@+id/textViewCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/inventory_title"
+        style="@style/HeaderFontStyle"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="12dp"/>
+
+    <!--body of screen, frame layout allows card elements and FAB to remain on screen -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <!-- add FAB for add new item to inventory
+        FIXME: figure out padding to move up the FAB -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+           app:shapeAppearanceOverlay="@style/fabStyle"
+            android:id="@+id/fab_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:src="@drawable/add_ic_button"
+            android:contentDescription="@string/add_icon"
+            android:backgroundTint="@color/green"
+            app:tint="@color/white"
+            />
+        <!-- TODO: add logout button/option -->
+        </FrameLayout>
+
+</LinearLayout>
