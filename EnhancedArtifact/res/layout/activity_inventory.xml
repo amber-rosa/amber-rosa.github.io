@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout for RecyclerView this is my "container" for my grid layout-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    android:padding="30dp">
+
+    <!--header of inventory page labeled Header-->
+    <TextView
+        android:id="@+id/inventoryHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/inventory_title"
+        style="@style/HeaderFontStyle"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="12dp"/>
+
+    <!-- Layout specifically for the sorting and search features to be side by side -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <!--  add spinner for sorting items -->
+    <Spinner
+        android:id="@+id/sorting_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:minWidth="48dp"/>
+
+        <!-- Add a spacer that will allow search icon to be at the far right
+        (end of screen) by utilizing a view-->
+        <View
+            android:id="@+id/viewSpace"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <!-- add x button to close search view, hide visibility until needed-->
+        <ImageButton
+            android:id="@+id/closeSearch"
+            android:contentDescription="@string/close_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:minWidth="48dp"
+            android:src="@drawable/close_search"
+            android:backgroundTint="@color/beige"
+            android:visibility="gone">
+        </ImageButton>
+        <!-- search icon, to search items within the database-->
+    <ImageButton
+        android:id="@+id/searchIcon"
+        android:contentDescription="@string/search_icon_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
+        android:src="@drawable/search_icon"
+        android:backgroundTint="@color/beige">
+    </ImageButton>
+
+        <!-- add item for search view, collapsible action view, hide visibility until clicked -->
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:queryHint="@string/action_search"
+            app:iconifiedByDefault="false"
+            android:visibility="gone">
+        </androidx.appcompat.widget.SearchView>
+
+
+    </LinearLayout>
+
+    <!--body of screen, frame layout allows card elements and FAB to remain on screen -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <!-- RecyclerView -->
+
+        <!-- add FAB for add new item to inventory -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+           app:shapeAppearanceOverlay="@style/fabStyle"
+            android:id="@+id/fab_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="normal"
+            android:layout_gravity="end|bottom"
+            android:src="@drawable/add_ic_button"
+            android:contentDescription="@string/add_icon"
+            android:backgroundTint="@color/green"
+            app:tint="@color/white"
+            />
+
+        </FrameLayout>
+    <!-- logout button -->
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="@string/log_out"
+        style="@style/LinkButtonStyle">
+    </Button>
+
+
+</LinearLayout>
